@@ -28,6 +28,7 @@ class Personaje():
         daño = (ataque_oponente/self.defensa)*100
         self.vida -= daño
         
+    #Regresa true si está muerto o false si el personaje todavía tiene vida
     def morir(self):
         if self.vida <= 0:
             print(self.nombre," se murió")
@@ -35,11 +36,16 @@ class Personaje():
         else: 
             return False
 
+#Programa principal
+
+#Creamos una lista de los personajes que queremos en nuestro juego
 luchadores = [Personaje("Mario",100,100,500),Personaje("Sonic", 150, 80, 500),Personaje("Link", 200,150,400)]
-    
+
+#Listamos los personajes en pantalla    
 for i in range(len(luchadores)):
     print(i+1,")",luchadores[i].nombre)
-    
+
+#Pedimos al usuario que seleccione el primer personaje
 while True:
     try:
         seleccion1 = int(input("Primer personaje: "))
@@ -49,7 +55,7 @@ while True:
             break
     except ValueError:
         print("Carácter no reconocido, intenta otra vez")
-            
+#Pedimos al usuario que seleccione el tercer personaje            
 while True:
     try:
         seleccion2 = int(input("Segundo personaje: "))
@@ -60,16 +66,20 @@ while True:
     except ValueError:
         print("Carácter no reconocido, intenta otra vez")
 
+#Asignamos la selección del usuario a luchador 1 y 2
 luchador1 = luchadores[seleccion1-1]
 luchador2 = luchadores[seleccion2-1]
 
-print(luchador2.vida)
 
+#print(luchador2.vida)
+#Jugador 1 ataca
 ataque_oponente = luchador1.atacar()
+#Jugador 2 se defiende con base en el ataque oponente
 luchador2.defender(ataque_oponente)
+#Preguntamos si el luchador 2 murió
 luchador2.morir()
 
-print(luchador2.vida)
+#print(luchador2.vida)
 
 
 
