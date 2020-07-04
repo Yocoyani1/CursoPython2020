@@ -4,7 +4,6 @@ Created on Sat Jul  4 09:49:10 2020
 
 @author: yocoy
 """
-
 #Definición de la clase Personaje
 class Personaje():
     
