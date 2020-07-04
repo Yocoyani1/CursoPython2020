@@ -5,6 +5,7 @@ Created on Sat Jul  4 09:49:34 2020
 @author: yocoy
 """
 from Personaje import Personaje
+from controlJuego import controlJuego
 
 def main():    
     #Creamos una lista de los personajes que queremos en nuestro juego
@@ -47,19 +48,6 @@ def main():
     luchador2 = Personaje(luchadores[seleccion2-1].nombre,luchadores[seleccion2-1].ataque,luchadores[seleccion2-1].defensa,
                            luchadores[seleccion2-1].vida)
     
-    
-    #print(luchador2.vida)
-    #Jugador 1 ataca
-    ataque_oponente = luchador1.atacar()
-    #Jugador 2 se defiende con base en el ataque oponente
-    luchador2.defender(ataque_oponente)
-    #Preguntamos si el luchador 2 murió
-    luchador2.morir()
-    
-    # print(luchador1.ataque)
-    # print(luchador2.ataque)
-    
-    print(luchador1.vida,luchador2.vida)
-    #print(luchador2.vida)
+    controlJuego(luchador1,luchador2)
     
 main()
