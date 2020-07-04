@@ -11,6 +11,10 @@ from random import randint
 def controlJuego(luchador1,luchador2):
     turno = 0
     while not luchador1.morir() and not luchador2.morir():
+        
+        print("Vida ",luchador1.nombre,":",luchador1.vida)
+        print("Vida ",luchador2.nombre,":",luchador2.vida)
+        
         if turno % 2 == 0:
             print("Turno jugador 1")
             input("Presione enter para atacar")

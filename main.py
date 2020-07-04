@@ -37,10 +37,6 @@ def main():
         except ValueError:
             print("Carácter no reconocido, intenta otra vez")
     
-    #Asignamos la selección del usuario a luchador 1 y 2
-    # luchador1 = luchadores[seleccion1-1]
-    # luchador2 = luchadores[seleccion2-1]
-    
     #Asignar selección del usuario creando dos objetos independientes
     luchador1 = Personaje(luchadores[seleccion1-1].nombre,luchadores[seleccion1-1].ataque,luchadores[seleccion1-1].defensa,
                            luchadores[seleccion1-1].vida)
