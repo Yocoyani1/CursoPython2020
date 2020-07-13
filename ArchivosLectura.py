@@ -12,3 +12,10 @@ lectura = archivo.readlines()
 archivo.close()
 
 print(lectura)
+
+lectura[0] = lectura[0].split('l')
+print(lectura)
+
+lectura[0][0] = lectura[0][0].replace('o','a')
+
+print(lectura)
